@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FetchService} from './fetch.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FetchDataComponent,
+    FetchDataComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FetchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
